@@ -1,33 +1,6 @@
-# LootBox
-Generate loot boxes
 
-# Usage
-```js
-import LootBox from './lootbox'
-import pool from './pool'
+import { rarity } from './lootbox'
 
-const lootbox = new LootBox(pool)
-```
-
-# Functions
-```ts
-// return pool
-getPool (): rarity[]
-// return a rarity
-getRarity (rarityID: string): rarity
-// choice a rarity randomly
-choiceRarity (): rarity
-// choice a item randomly from a specific ratity
-choicePrize (rarity: rarity): item
-// open one lootbox
-open(): item
-// open a pack of lootbox, can be passed a bonus item os one rarity
-openPack (packSize: Number, bonusItemRarity?: string): item[]
-```
-
-# Example Pool Config
-
-```ts
 const pool:rarity[] = [
   {
     label: 'Ultra Rare',
@@ -130,4 +103,5 @@ const pool:rarity[] = [
     ]
   }
 ]
-```
+
+export default pool
